@@ -1,8 +1,9 @@
 import { useOutletContext } from "react-router-dom";
-import type { OutletContext } from "../../type";
+import type { Van } from "../../type";
 
+type HostOutletContext = { currentVan: Van };
 export default function HostVanInfo() {
-  const { currentVan } = useOutletContext<OutletContext>();
+  const { currentVan } = useOutletContext<HostOutletContext>();
 
   return (
     <section className="host-van-detail-info">
